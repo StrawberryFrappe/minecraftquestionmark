@@ -1,0 +1,10 @@
+{
+    "name": "claude-code",
+
+    "model": {
+        "model": "claude-code/sonnet",
+        "params": {
+            "effort": "low"
+        }
+    }
+}

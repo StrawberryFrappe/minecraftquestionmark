@@ -14,6 +14,9 @@
   <a href="https://github.com/mindcraft-bots/mindcraft/blob/main/minecollab.md">MineCollab</a>
 </p>
 
+> [!Note]
+> **This fork runs on Claude Code.** By default the bots get their answers from your Claude Code login (headless `claude -p`) or from a live Claude Code session over MCP, so you don't need API keys. See [CLAUDE_CODE.md](CLAUDE_CODE.md).
+
 > [!Caution]
 Do not connect this bot to public servers with coding enabled. This project allows an LLM to write/execute code on your computer. The code is sandboxed, but still vulnerable to injection attacks. Code writing is disabled by default, you can enable it by setting `allow_insecure_coding` to `true` in `settings.js`. Ye be warned.
 
@@ -22,7 +25,7 @@ Do not connect this bot to public servers with coding enabled. This project allo
 
 - [Minecraft Java Edition](https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc) (up to v1.21.11, recommend v1.21.6)
 - [Node.js Installed](https://nodejs.org/) (Node v18 or v20 LTS recommended. Node v24+ may cause issues with native dependencies)
-- At least one API key from a supported API provider. See [supported APIs](#model-customization). OpenAI is the default.
+- [Claude Code](https://code.claude.com), installed and logged in. This is the default, see [CLAUDE_CODE.md](CLAUDE_CODE.md). Or use an API key from any [supported API](#model-customization).
 
 > [!Important]
 > If installing node on windows, ensure you check `Automatically install the necessary tools`
@@ -58,6 +61,8 @@ You can configure the agent's name, model, and prompts in their profile like `an
 
 | API Name | Config Variable| Docs |
 |------|------|------|
+| `claude-code` | none (uses your Claude Code login) | [CLAUDE_CODE.md](CLAUDE_CODE.md) |
+| `claude-mcp` | none (a Claude Code session via the MCP bridge) | [CLAUDE_CODE.md](CLAUDE_CODE.md) |
 | `openai` | `OPENAI_API_KEY` | [docs](https://platform.openai.com/docs/models) |
 | `google` | `GEMINI_API_KEY` | [docs](https://ai.google.dev/gemini-api/docs/models/gemini) |
 | `anthropic` | `ANTHROPIC_API_KEY` | [docs](https://docs.anthropic.com/claude/docs/models-overview) |
