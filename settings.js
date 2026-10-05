@@ -10,7 +10,7 @@ const settings = {
     
     "base_profile": "assistant", // survival, assistant, creative, or god_mode
     "profiles": [
-        "./andy.json", // uses Claude Code, see CLAUDE_CODE.md
+        "./andy.json", // uses Claude Code, see README.md
         // "./profiles/claude-code.json", // Claude Code headless (claude -p)
         // "./profiles/claude-mcp.json", // a live Claude Code session via the MCP bridge
         // "./profiles/gpt.json",
